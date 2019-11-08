@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5CCE88C-37D0-4D02-ABF5-C027754A90C1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>gof</RootNamespace>
+    <AssemblyName>gof</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behavioral\Observer\ConcreteObserverA.cs" />
+    <Compile Include="Behavioral\Observer\ConcreteObserverB.cs" />
+    <Compile Include="Behavioral\Observer\IObserver.cs" />
+    <Compile Include="Behavioral\Observer\ISubject.cs" />
+    <Compile Include="Behavioral\Observer\Subject.cs" />
+    <Compile Include="Creational\FactoryMethod\AbstractFactory.cs" />
+    <Compile Include="Creational\FactoryMethod\ConcreteFactoryMethod_type_B.cs" />
+    <Compile Include="Creational\FactoryMethod\ConcreteFactoryMethod_type_A.cs" />
+    <Compile Include="Creational\FactoryMethod\ConcreteFactory_type_B.cs" />
+    <Compile Include="Creational\FactoryMethod\ConcreteFactory_type_A.cs" />
+    <Compile Include="Creational\FactoryMethod\Example.cs" />
+    <Compile Include="Behavioral\Observer\Example.cs" />
+    <Compile Include="Creational\FactoryMethod\IFactoryMethod.cs" />
+    <Compile Include="Creational\FactoryMethod\TheFactory.cs" />
+    <Compile Include="Interfaces\IExample.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
