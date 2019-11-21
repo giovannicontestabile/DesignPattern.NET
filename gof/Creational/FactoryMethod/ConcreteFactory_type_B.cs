@@ -2,8 +2,9 @@
 {
     class ConcreteFactory_type_B : AbstractFactory
     {
-        internal override IFactoryMethod TheFactoryMethod(string param)
+        internal override IFactoryMethod TheFactoryMethod()
         {
+            init();
             return new ConcreteMethod_type_B();
         }
 

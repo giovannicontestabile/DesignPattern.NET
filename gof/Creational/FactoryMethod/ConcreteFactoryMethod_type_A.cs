@@ -4,7 +4,8 @@
     {
         public string Operation(string param)
         {
-            return "\n{This is typeA method.I'm " + this.ToString() + ". My param is " + param?.ToString() + "}\n\n";
+            var a_result = "\n{This is typeA method.I'm " + this.ToString() + ". My param is " + param?.ToString() + "}\n\n";
+            return a_result;
         }
     }
 }

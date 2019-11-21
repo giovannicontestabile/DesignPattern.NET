@@ -4,16 +4,16 @@
     {
         //costruisco la classe astratta della Facory
 
-        internal abstract IFactoryMethod TheFactoryMethod(string param);
+        internal abstract IFactoryMethod TheFactoryMethod();
 
         public string TypeObject { set; get; }
 
         public string DoSomething()
         {
-            var customComponent = TheFactoryMethod(this.TypeObject);
+            var customComponent = TheFactoryMethod();
 
             var result = "\n... {Standard Common Implementation}\nThis is a common message.\nThen I'll show you the custom mesage from the factorized method."
-                + customComponent.Operation(TypeObject);
+                + customComponent.Operation(this.TypeObject);
 
             return result;
         }
